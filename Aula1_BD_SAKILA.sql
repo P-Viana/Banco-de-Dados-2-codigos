@@ -14,4 +14,4 @@ select * from film where title like 'RE%' and rental_duration in (3, 6) and rati
 select format (rental_rate * 1.10, 2) as rental_rate_calcute, rental_rate, film.* from film;					# É possível fazer calculos direto no select como visto no código
 select distinct rental_duration from film;																		# O DISTINCT faz mostrar apenas um de cada tipo que exite na coluna selecionada]
 select * from film limit 15 offset 4;																			# O LIMIT limita a sua lista para o número que você selecionou. O OFFSET retira os que você selecionou, no caso 3
-
+select payment_date, day(payment_date), month(payment_date), year(payment_date) from payment where year(payment_date) = 2005 and month(payment_date) between 7 and 9;
